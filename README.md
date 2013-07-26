@@ -2,7 +2,7 @@
 
 ![](https://github.com/mrk/seapush/blob/master/seapush.png?raw=true)
 
-seapush is a python script that applies a custom ['seapunk'](http://images.google.com/images?q=seapunk) color scheme to the LEDs on [Ableton's Push controller](https://www.ableton.com/push/).  it does not change Push's functionality in any way.
+seapush is a python script that applies a custom [seapunk](http://images.google.com/images?q=seapunk) color scheme to the LEDs on [Ableton's Push controller](https://www.ableton.com/push/).  it does not change Push's functionality in any way.
 
 **NOTE: this version of seapush has only been tested with Ableton Live v.9.0.5, and is not compatible with earlier versions.**
 
