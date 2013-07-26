@@ -17,3 +17,8 @@ this script is a modification of [dreznicek's decompiled push skin default scrip
 4. Restart Ableton Live if it's already running.
 5. Enjoy your sexy new Push!
 6. You can further modify the SkinDefaults.py file to your heart's content.  Info and discussion on color variable names and conventions for this script can be found on [this thread in the Ableton forums](https://forum.ableton.com/viewtopic.php?f=55&t=192043).
+
+##License ##
+
+[![Creative Commons License](http://i.creativecommons.org/l/by/3.0/88x31.png)](http://creativecommons.org/licenses/by/3.0/)
+This work is licensed under a [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).
