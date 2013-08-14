@@ -10,7 +10,7 @@ seapush is a python script that applies a custom [seapunk](http://images.google.
 
 this script is a modification of [dreznicek's decompiled push skin default script for Live 9.0.5](https://github.com/dreznicek/AbletonLive9_SkinDefault/tree/9.0.5).
 
-<< BONUS:: "YO DAWG I HEARD U LIKE SEAPUNK" :: my custom seapunk textmate color theme (compatible w both TextMate and SublimeText) so you can modify my seapunk color scheme using a seapunk color scheme //  n.b. this color scheme was a modification of another i had been using but can't remember which; happy to add a citation when i know whom to credit >>
+<< BONUS:: "YO DAWG I HEARD U LIKE SEAPUNK" :: i've also included my custom seapunk TextMate color theme (compatible w both TextMate and SublimeText) so you can modify my seapunk color scheme using a seapunk color scheme //  n.b. this color scheme was a modification of another i had been using but can't remember which; happy to add a citation when i know whom to credit >>
 
 
 ##Installation and Use ##
