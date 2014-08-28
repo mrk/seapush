@@ -1,3 +1,4 @@
+from _Framework.Skin import Skin
 from Colors import Basic
 from Colors import Rgb
 from Colors import Pulse
@@ -36,12 +37,11 @@ class Colors:
     class Instrument:
         NoteBase = Rgb.ORCHID
         NoteScale = Rgb.TURQUOISE.shade(1)
-        NoteForeign = Rgb.BLUE.shade(2)
+        NoteNotScale = Rgb.BLACK
         NoteInvalid = Rgb.BLACK
-        NoteInactive = Rgb.BLACK
-        NoteOff = Rgb.DARK_GREY
         Feedback = Rgb.LIME
         FeedbackRecord = Rgb.RED.shade(1)
+        NoteAction = Rgb.DARK_GREY
 
     class Recording:
         On = Basic.FULL
@@ -49,9 +49,9 @@ class Colors:
         Transition = Basic.FULL_BLINK_FAST
 
     class Session:
-        SceneSelected = BiLed.GREEN
-        SceneUnselected = BiLed.OFF
+        Scene = BiLed.GREEN
         SceneTriggered = BiLed.GREEN_BLINK_FAST
+        NoScene = BiLed.OFF
         ClipStopped = Rgb.AMBER
         ClipStarted = Pulse(Rgb.GREEN.shade(1), Rgb.GREEN, 48)
         ClipRecording = Pulse(Rgb.BLACK, Rgb.RED, 48)
@@ -59,6 +59,9 @@ class Colors:
         ClipTriggeredRecord = Blink(Rgb.RED, Rgb.BLACK, 24)
         ClipEmpty = Rgb.BLACK
         RecordButton = Rgb.RED.shade(2)
+        StopClip = Rgb.RED
+        StopClipTriggered = Blink(Rgb.RED, Rgb.BLACK, 24)
+        StoppedClip = Rgb.DARK_GREY
 
     class Zooming:
         Selected = Rgb.AMBER
@@ -81,25 +84,46 @@ class Colors:
         PadSoloed = Rgb.OCEAN.highlight()
         PadSoloedSelected = Rgb.OCEAN
         PadInvisible = Rgb.BLACK
+        PadAction = Rgb.RED
 
     class LoopSelector:
         Playhead = Rgb.MAGENTA
         PlayheadRecord = Rgb.RED
         SelectedPage = Rgb.OCEAN
+        InsideLoopStartBar = Rgb.SKY.highlight()
         InsideLoop = Rgb.SPRING.shade(1)
         OutsideLoop = Rgb.SPRING.shade(2)
 
     class NoteEditor:
-        Step = Rgb.LIME.highlight()
-        StepHighVelocity = Rgb.LIME
-        StepFullVelocity = Rgb.GREEN
-        StepMuted = Rgb.AMBER.shade(2)
+        class Step:
+            Low = Rgb.LIME.highlight()
+            High = Rgb.LIME
+            Full = Rgb.GREEN
+            Muted = Rgb.AMBER.shade(2)
+
+        class StepEditing:
+            Low = Rgb.LIME.highlight()
+            High = Rgb.LIME
+            Full = Rgb.GREEN
+            Muted = Rgb.AMBER.shade(2)
+
+        StepSelected = Rgb.WHITE
         StepEmpty = Rgb.TURQUOISE.shade(2)
+        StepEmptyBase = Rgb.TURQUOISE.shade(1)
+        StepEmptyScale = Rgb.DARK_GREY
         StepDisabled = Rgb.RED.shade(2)
         Playhead = Rgb.MAGENTA
         PlayheadRecord = Rgb.RED
         QuantizationSelected = BiLed.GREEN
         QuantizationUnselected = BiLed.YELLOW
+        NoteBase = Rgb.AMBER.shade(2)
+        NoteScale = Rgb.DARK_GREY
+        NoteNotScale = Rgb.BLACK
+        NoteInvalid = Rgb.RED.shade(2)
+
+    class Melodic:
+        Playhead = Rgb.TURQUOISE.shade(2)
+        PlayheadRecord = Rgb.RED.shade(1)
 
     class NoteRepeat:
         RateSelected = BiLed.RED
@@ -110,8 +134,6 @@ class Colors:
         SoloOff = Rgb.OCEAN.shade(2)
         MuteOn = Rgb.DARK_GREY
         MuteOff = BiLed.YELLOW
-        StopTrack = Rgb.RED
-        StoppingTrack = Blink(Rgb.RED, Rgb.BLACK, 24)
         ArmSelected = BiLed.RED
         ArmUnselected = BiLed.RED_HALF
 
@@ -123,3 +145,6 @@ class Colors:
 
     class MessageBox:
         Cancel = BiLed.GREEN
+
+def make_default_skin():
+    return Skin(Colors)
