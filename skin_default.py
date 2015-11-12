@@ -1,10 +1,8 @@
-from _Framework.Skin import Skin
-from Colors import Basic
-from Colors import Rgb
-from Colors import Pulse
-from Colors import Blink
-from Colors import BiLed
+from ableton.v2.control_surface import Skin
+from .colors import Basic, Rgb, Pulse, Blink, BiLed
+
 class Colors:
+
     class Option:
         Selected = BiLed.AMBER
         Unselected = BiLed.YELLOW_HALF
@@ -47,6 +45,12 @@ class Colors:
         On = Basic.FULL
         Off = Basic.HALF
         Transition = Basic.FULL_BLINK_FAST
+        FixedLengthRecordingOn = BiLed.YELLOW
+        FixedLengthRecordingOff = BiLed.OFF
+
+    class Automation:
+        On = Basic.FULL
+        Off = Basic.HALF
 
     class Session:
         Scene = BiLed.GREEN
@@ -85,6 +89,11 @@ class Colors:
         PadSoloedSelected = Rgb.OCEAN
         PadInvisible = Rgb.BLACK
         PadAction = Rgb.RED
+        
+    class SlicedSimpler:
+        SliceSelected = Rgb.OCEAN
+        SliceUnselected = Rgb.YELLOW
+        NoSlice = Rgb.YELLOW.shade(2)
 
     class LoopSelector:
         Playhead = Rgb.MAGENTA
@@ -95,6 +104,7 @@ class Colors:
         OutsideLoop = Rgb.SPRING.shade(2)
 
     class NoteEditor:
+
         class Step:
             Low = Rgb.LIME.highlight()
             High = Rgb.LIME
@@ -109,8 +119,6 @@ class Colors:
 
         StepSelected = Rgb.WHITE
         StepEmpty = Rgb.TURQUOISE.shade(2)
-        StepEmptyBase = Rgb.TURQUOISE.shade(1)
-        StepEmptyScale = Rgb.DARK_GREY
         StepDisabled = Rgb.RED.shade(2)
         Playhead = Rgb.MAGENTA
         PlayheadRecord = Rgb.RED
@@ -142,9 +150,28 @@ class Colors:
         LoadNext = BiLed.YELLOW
         LoadNotPossible = BiLed.OFF
         Loading = BiLed.OFF
+        Prehear = Rgb.BLUE
+        PrehearOff = Rgb.WHITE
 
     class MessageBox:
         Cancel = BiLed.GREEN
+
+    class Transport:
+        PlayOn = Basic.FULL
+        PlayOff = Basic.HALF
+
+    class Metronome:
+        On = Basic.FULL_BLINK_SLOW
+        Off = Basic.FULL
+
+    class FixedLength:
+        On = Basic.FULL
+        Off = Basic.HALF
+
+    class Accent:
+        On = Basic.FULL
+        Off = Basic.HALF
+
 
 def make_default_skin():
     return Skin(Colors)
